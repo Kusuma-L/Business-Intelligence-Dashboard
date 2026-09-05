@@ -1,0 +1,189 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+}
+
+.dashboard {
+  padding: 30px;
+  max-width: 1400;
+  margin: 0 auto;
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+header p {
+  color: #64748b;
+  font-size: 16px;
+}
+
+.kpi-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.kpi-card h3 {
+  margin: 0;
+  color: #666;
+  font-size: 15px;
+}
+
+.kpi-card h2 {
+  margin: 12px 0;
+  font-size: 28px;
+  color: #222;
+}
+
+.kpi-card p {
+  margin: 0;
+  color: green;
+  font-size: 14px;
+}
+
+.chart-container {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.chart-container canvas {
+  max-height: 400px;
+}
+
+@media (max-width: 900px) {
+  .kpi-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .kpi-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filter-container label {
+  font-weight: 600;
+  color: #334155;
+}
+
+.filter-container select {
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-container button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #334155;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-container button:hover {
+  background: #1e293b;
+}
+
+.table-container {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.table-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1e293b;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+tr:hover {
+  background: #f8fafc;
+}
+
+.revenue-cell {
+  font-weight: 600;
+}
+
+.profit-cell {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 15px;
+  }
+
+  .table-container {
+    padding: 15px;
+  }
+
+  th,
+  td {
+    padding: 9px;
+    font-size: 13px;
+  }
+}
